@@ -229,7 +229,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/04/Distributed-System/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/04/RunqianChen/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Runqian Chen">
@@ -248,7 +248,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/04/Distributed-System/" itemprop="url">Distributed System</a></h1>
+                <a class="post-title-link" href="/2018/11/04/RunqianChen/" itemprop="url">RunqianChen</a></h1>
         
 
         <div class="post-meta">
@@ -260,7 +260,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-04T13:50:29+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-04T13:25:13+08:00">
                 2018-11-04
               </time>
             
@@ -300,228 +300,8 @@
       
         
           
-            <h1 id="分布式系统-2"><a href="#分布式系统-2" class="headerlink" title="分布式系统 2"></a>分布式系统 2</h1><h2 id="扩张规模导致系统的复杂性"><a href="#扩张规模导致系统的复杂性" class="headerlink" title="扩张规模导致系统的复杂性"></a>扩张规模导致系统的复杂性</h2><blockquote>
-<ul>
-<li>单核服务器 - 多核服务器 - 集群 - 复杂的分布式系统数据中心<ul>
-<li>并发性</li>
-<li>网络</li>
-<li>广域网</li>
-<li>…</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>系统的发展<ul>
-<li>优势<ul>
-<li>性能增加</li>
-</ul>
-</li>
-<li>劣势<ul>
-<li>复杂性增加</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<h2 id="并行编程模型"><a href="#并行编程模型" class="headerlink" title="并行编程模型"></a>并行编程模型</h2><h3 id="可扩展性"><a href="#可扩展性" class="headerlink" title="可扩展性"></a>可扩展性</h3><blockquote>
-<ul>
-<li>系统可以 <strong>自适应</strong> 需求的增加和减少</li>
-<li>相当规模的运行能力</li>
-<li>迅速增长能力</li>
-</ul>
-</blockquote>
-<h4 id="实现可扩展性算法"><a href="#实现可扩展性算法" class="headerlink" title="实现可扩展性算法"></a>实现可扩展性算法</h4><blockquote>
-<ul>
-<li>并行化处理</li>
-</ul>
-</blockquote>
-<h4 id="实际情况下的可扩展性"><a href="#实际情况下的可扩展性" class="headerlink" title="实际情况下的可扩展性"></a>实际情况下的可扩展性</h4><blockquote>
-<ul>
-<li>计算机核数增加 — <strong>计算速度只会增长到一个特定的点</strong> — <strong>甜点</strong></li>
-<li>Amdahl 定律<ul>
-<li><strong>加速比 = 优化之前系统耗时 / 优化后系统耗时</strong></li>
-<li>一个算法并不是每一个部分都能并行化</li>
-<li>可以并行化的部分占比可以得出一个加速比</li>
-<li>而串行部分所耗费的时间即不能缩减的点</li>
-</ul>
-</li>
-<li>当并行度超过 <strong>甜点</strong>， 继续增加并行度会导致性能下降</li>
-</ul>
-</blockquote>
-<h4 id="并行粒度"><a href="#并行粒度" class="headerlink" title="并行粒度"></a>并行粒度</h4><blockquote>
-<ul>
-<li>给定一个计算任务，每个核该分配多大的计算内容<ul>
-<li><strong>粗粒度、细粒度的并行化</strong></li>
-</ul>
-</li>
-<li>频繁任务协调会有额外的开销</li>
-<li><strong>粗粒度</strong> 往往效率更高</li>
-</ul>
-</blockquote>
-<h4 id="依赖关系"><a href="#依赖关系" class="headerlink" title="依赖关系"></a>依赖关系</h4><blockquote>
-<ul>
-<li>如果<strong>任务之间**</strong>存在互相依赖关系怎么办**？<ul>
-<li>eg. 合并之前需要对各自的链表进行排序</li>
-<li>互相依赖关系限制了并行度</li>
-<li>最小的整体任务完成时间（最大的加速比）取决于从 <strong>开始到完成的最长路径</strong></li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<h4 id="异构性问题"><a href="#异构性问题" class="headerlink" title="异构性问题"></a>异构性问题</h4><blockquote>
-<ul>
-<li>不同子任务的计算量不一样</li>
-<li>计算时间不一样</li>
-<li>优先级不一样</li>
-<li>并且不是所有的计算都是均等速度</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li><strong>求解任务调度问题的最优解</strong></li>
-</ul>
-</blockquote>
-<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><blockquote>
-<ul>
-<li>可扩展性的制约因素<ul>
-<li>Amdahl 定律</li>
-<li>任务之间的依赖关系</li>
-<li>通信的开销</li>
-<li>异构性问题</li>
-<li>…</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<h3 id="同步"><a href="#同步" class="headerlink" title="同步"></a>同步</h3><h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><blockquote>
-<ul>
-<li>保证数据的一致性</li>
-<li>竞争<ul>
-<li>有读有写导致竞争</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>保证一致性</li>
-<li>同步</li>
-</ul>
-</blockquote>
-<h4 id="一致性模型"><a href="#一致性模型" class="headerlink" title="一致性模型"></a>一致性模型</h4><h5 id="顺序一致性"><a href="#顺序一致性" class="headerlink" title="顺序一致性"></a>顺序一致性</h5><blockquote>
-<ul>
-<li><strong>最严格</strong>的一致性模型<ul>
-<li>任意一种情况的执行结果均相同</li>
-<li>所有的核都按照某个串行的顺序进行计算处理</li>
-<li><strong>每一个核在其中的执行顺序均与程序指定的顺序一致</strong></li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<h5 id="强一致模型"><a href="#强一致模型" class="headerlink" title="强一致模型"></a>强一致模型</h5><blockquote>
-<ul>
-<li>仅仅当更新完成之后，之后的访问才可以访问到更新的值</li>
-</ul>
-</blockquote>
-<h5 id="弱一致模型"><a href="#弱一致模型" class="headerlink" title="弱一致模型"></a>弱一致模型</h5><blockquote>
-<ul>
-<li>当更新完成之后，之后的访问不必返回已经更新的值，不过必须要满足一些条件</li>
-</ul>
-</blockquote>
-<h5 id="最终一致性模型"><a href="#最终一致性模型" class="headerlink" title="最终一致性模型"></a>最终一致性模型</h5><blockquote>
-<ul>
-<li>弱一致性</li>
-<li>如果没有更多的更新，则所有的读操作将最终访问最近的值</li>
-</ul>
-</blockquote>
-<h3 id="互斥"><a href="#互斥" class="headerlink" title="互斥"></a>互斥</h3><blockquote>
-<ul>
-<li>临界区<ul>
-<li>限制在任意时刻只有一个核 / 机器可以执行该临界区代码</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<h3 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h3><blockquote>
-<ul>
-<li>临界区上锁</li>
-</ul>
-</blockquote>
-<h4 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h4><blockquote>
-<ul>
-<li>大家都阻塞</li>
-</ul>
-</blockquote>
-<h5 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h5><blockquote>
-<ul>
-<li><strong>锁管理器</strong></li>
-<li><strong>资源分级</strong></li>
-<li>Chandy / Misra 解法</li>
-</ul>
-</blockquote>
-<h3 id="体系结构"><a href="#体系结构" class="headerlink" title="体系结构"></a>体系结构</h3><h4 id="对称多处理器-SMP"><a href="#对称多处理器-SMP" class="headerlink" title="对称多处理器 SMP"></a>对称多处理器 SMP</h4><blockquote>
-<ul>
-<li>所有处理器都共享同一内存</li>
-<li>优点<ul>
-<li>简单、容易取得负载均衡</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>扩展性有限</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<h4 id="非一致性内存架构-NUMA"><a href="#非一致性内存架构-NUMA" class="headerlink" title="非一致性内存架构 NUMA"></a>非一致性内存架构 NUMA</h4><blockquote>
-<ul>
-<li>内存只对临近的特定处理器开放访问</li>
-<li>优点<ul>
-<li>扩展性更优</li>
-</ul>
-</li>
-<li>不足<ul>
-<li>编程复杂</li>
-<li>扩展性依然有限</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<h4 id="无共享结构-Shared-Nothing"><a href="#无共享结构-Shared-Nothing" class="headerlink" title="无共享结构 Shared-Nothing"></a>无共享结构 Shared-Nothing</h4><blockquote>
-<ul>
-<li>通过网络互联的完全独立的计算机</li>
-<li>优点<ul>
-<li>扩展性更优</li>
-</ul>
-</li>
-<li>不足<ul>
-<li>编码模型复杂，困难</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><blockquote>
-<ul>
-<li><strong>对称多处理器</strong> SMP<ul>
-<li>多核 CPUs 可以共享内存</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>解决互斥问题有别的办法<ul>
-<li><strong>乐观并发控制</strong><ul>
-<li>允许并发更新</li>
-<li>试图合并 并非更新的结果</li>
-<li>如果不能，就串行处理</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+            <blockquote>
+<p>Build my first Blog with hexo and github successfully! </p>
 </blockquote>
 
           
@@ -561,10 +341,6 @@
   </section>
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
 
 
           </div>
@@ -608,7 +384,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
