@@ -1399,7 +1399,7 @@ pre .javascript .function {
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
   transition-property: border;
-/*border-bottom: 1px dashed $grey-light;*/
+  border-bottom: 1px dashed #ccc;
 }
 .posts-collapse .post-header::before {
   content: " ";
@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #45fb59;
+  background: #2e6f3c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2659,4 +2659,7 @@ embed {
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
+}
+.post-header {
+  border-bottom: 0px dashed #ccc;
 }
