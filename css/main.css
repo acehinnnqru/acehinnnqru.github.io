@@ -1399,7 +1399,7 @@ pre .javascript .function {
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
   transition-property: border;
-  border-bottom: 1px dashed #ccc;
+/*border-bottom: 1px dashed $grey-light;*/
 }
 .posts-collapse .post-header::before {
   content: " ";
@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #99cfa8;
+  background: #45fb59;
 }
 .links-of-blogroll {
   font-size: 13px;
