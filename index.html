@@ -367,6 +367,139 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/27/ubuntu_install_phantomjs/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Runqian Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Powerrrrrr">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/27/ubuntu_install_phantomjs/" itemprop="url">install phantomjs on ubuntu 16.04</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-27T19:59:46+08:00">
+                2019-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>在我个人的阿里云服务器 (ubuntu 16.04) 上安装 phantomjs 的时候出了一些问题，几番周折之后，终于解决了问题。</p>
+<p>环境：ubuntu 16.04, phantomjs 2.1.0 无界面</p>
+</blockquote>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>基本上是很简单的安装即可。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install phantomjs</span><br></pre></td></tr></table></figure>
+<p>然后通过简单的 <code>phantomjs</code> 或者 <code>phantomjs --version</code> 检查是否安装成功。</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>我遇到了以下问题：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">QXcbConnection: Could not connect to display </span><br><span class="line">PhantomJS has crashed. Please read the bug reporting guide at</span><br><span class="line">&lt;http://phantomjs.org/bug-reporting.html&gt; and file a bug report.</span><br><span class="line">Aborted</span><br></pre></td></tr></table></figure>
+<p>通过查找，发现问题出在 phantomjs 的默认设置会需要界面，但是我是在无界面的情况下安装的。因此需要改设定，否则无法正常运作。</p>
+<p>phantomjs 的启动脚本应该在这：<code>/usr/bin/phantomjs</code></p>
+<p>在文件中 <code>exec ...</code> 那行之前加入：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export QT_QPA_PLATFORM=offscreen</span><br><span class="line">export QT_QPA_FONTDIR=/usr/share/fonts</span><br></pre></td></tr></table></figure>
+<p>一定要在 <code>exec ....</code> 这条指令形式之前。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/18/Learing/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -2702,146 +2835,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/24/服务器端 ssh 自动断开解决/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Runqian Chen">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Powerrrrrr">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/24/服务器端 ssh 自动断开解决/" itemprop="url">服务器端 ssh 自动断开解决</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-24T11:54:09+08:00">
-                2019-02-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>远程服务器在利用 ssh 连接时，一段时间不操作就会断开连接，提示一般是：</p>
-<blockquote>
-<p>Connection reset by x.x.x.x port 22</p>
-</blockquote>
-<p>解决方案如下：</p>
-<ol>
-<li><p>找到 sshd 配置文件</p>
-<blockquote>
-<p>一般是 /etc/ssh/sshd_config</p>
-<p>命令：<code>vim /etc/ssh/sshd_config</code></p>
-<p>当然你用 gedit 也可以，依照个人喜好</p>
-</blockquote>
-</li>
-<li><p>在配置文件里加上：（如果本来就有，则修改参数）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> x 表示 服务器每隔 x 秒给客户端发一次请求</span><br><span class="line">ClientAliveInterval x</span><br><span class="line"><span class="meta">#</span> y 表示 服务器接收不到 y 次回应，则断开连接</span><br><span class="line">ClientAliveCountMax y</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>保存并退出，重启ssh</p>
-<p> <code>/etc/init.d/sshd restart</code></p>
-</li>
-</ol>
-<p>完成。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2892,7 +2885,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
