@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Python,pip,">
+  <meta name="keywords" content="MySql,Solutions,">
 
 
 
@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="Error log: 1pip._vendor.urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host=&apos;files.pythonhosted.org&apos;, port=443): Read timed out. Solution: set the default timeout of pip install: 1pip instal">
-<meta name="keywords" content="Python,pip">
+<meta name="description" content="When I was trying to move a database from the remote to localhost, I met this error due to the different settings of the local database.  The Error log1mysql &amp;gt; Error 1071: create table: Specified">
+<meta name="keywords" content="MySql,Solutions">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pip timeout error">
-<meta property="og:url" content="http://yoursite.com/2019/03/17/pip timeout/index.html">
+<meta property="og:title" content="MySql Error 1071">
+<meta property="og:url" content="http://yoursite.com/2019/05/14/MySql-Error-1071/index.html">
 <meta property="og:site_name" content="Powerrrrrr">
-<meta property="og:description" content="Error log: 1pip._vendor.urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host=&apos;files.pythonhosted.org&apos;, port=443): Read timed out. Solution: set the default timeout of pip install: 1pip instal">
+<meta property="og:description" content="When I was trying to move a database from the remote to localhost, I met this error due to the different settings of the local database.  The Error log1mysql &amp;gt; Error 1071: create table: Specified">
 <meta property="og:locale" content="English">
-<meta property="og:updated_time" content="2019-05-13T17:36:10.113Z">
+<meta property="og:image" content="http://yoursite.com/2019/05/14/MySql-Error-1071/1557774982394.png">
+<meta property="og:updated_time" content="2019-05-13T19:18:19.411Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pip timeout error">
-<meta name="twitter:description" content="Error log: 1pip._vendor.urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host=&apos;files.pythonhosted.org&apos;, port=443): Read timed out. Solution: set the default timeout of pip install: 1pip instal">
+<meta name="twitter:title" content="MySql Error 1071">
+<meta name="twitter:description" content="When I was trying to move a database from the remote to localhost, I met this error due to the different settings of the local database.  The Error log1mysql &amp;gt; Error 1071: create table: Specified">
+<meta name="twitter:image" content="http://yoursite.com/2019/05/14/MySql-Error-1071/1557774982394.png">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/17/pip timeout/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/14/MySql-Error-1071/">
 
 
 
 
 
-  <title>pip timeout error | Powerrrrrr</title>
+  <title>MySql Error 1071 | Powerrrrrr</title>
   
 
 
@@ -243,7 +245,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/17/pip timeout/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/14/MySql-Error-1071/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Runqian Chen">
@@ -260,7 +262,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">pip timeout error</h1>
+          <h1 class="post-title" itemprop="name headline">MySql Error 1071</h1>
         
 
         <div class="post-meta">
@@ -272,8 +274,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-17T15:50:11+08:00">
-                2019-03-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-14T03:29:30+08:00">
+                2019-05-14
               </time>
             
 
@@ -310,12 +312,40 @@
       
 
       
-        <p>Error log:</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip._vendor.urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host=<span class="string">'files.pythonhosted.org'</span>, port=<span class="number">443</span>): Read timed out.</span><br></pre></td></tr></table></figure>
-<p>Solution:</p>
-<p><strong>set the default timeout of pip install</strong>:</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --default-timeout=<span class="number">100</span> pysmb</span><br></pre></td></tr></table></figure>
-<p>But the reason might be your network is poor, so changing your network is a better method. </p>
+        <blockquote>
+<p>When I was trying to move a database from the remote to localhost, I met this error due to the different settings of the local database.</p>
+</blockquote>
+<h4 id="The-Error-log"><a href="#The-Error-log" class="headerlink" title="The Error log"></a>The Error log</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql &gt; Error 1071: create table: Specified key was too long; max key length is 767 bytes</span><br></pre></td></tr></table></figure>
+<p>It is obvious that the max key length limit caught this error.</p>
+<p>So we have two methods to solve it:</p>
+<ul>
+<li>Change the limit</li>
+<li>Use a shorter part of the content as index</li>
+</ul>
+<h4 id="Change-the-limit"><a href="#Change-the-limit" class="headerlink" title="Change the limit"></a>Change the limit</h4><p>The Innodb engine of MySql got a parameter named <strong>innodb_large_prefix</strong> which can change the max key length of the utf8-based database from 767 bytes to 3072.</p>
+<p>So we can change the <strong>innodb_large_prefix</strong> then recreate the database(remember to backup your data first).</p>
+<p>There are some methods to change it:</p>
+<ul>
+<li>Modify the configure file</li>
+<li>Set some parameters in mysql terminal</li>
+</ul>
+<h5 id="Modify-the-configure-file"><a href="#Modify-the-configure-file" class="headerlink" title="Modify the configure file"></a>Modify the configure file</h5><p>Add following sentences to the [mysqld] setting in my.cnf(Linux) or my.ini(windows)</p>
+<blockquote>
+<p>the filename based  on your own system and computer</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line">...</span><br><span class="line">innodb_file_format = Barracuda</span><br><span class="line">innodb_large_prefix = 1</span><br><span class="line">innodb_file_per_table = ON</span><br></pre></td></tr></table></figure>
+<h5 id="Set-parameters-in-terminal"><a href="#Set-parameters-in-terminal" class="headerlink" title="Set parameters in terminal"></a>Set parameters in terminal</h5><ol>
+<li><p>Login the mysql with user root</p>
+</li>
+<li><p>Set the parameters</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql &gt; SET GLOBAL innodb_file_format = Barracuda;</span><br><span class="line">mysql &gt; SET GLOBAL innodb_file_per_table = ON;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>When you finished setting the parameters, continue:</p>
+<h5 id="Recreate-your-database-and-tables"><a href="#Recreate-your-database-and-tables" class="headerlink" title="Recreate your database and tables"></a>Recreate your database and tables</h5><p>Add the default parameter ROW_FORMAT = DYNAMIC to your definition scripts.</p>
+<p>example:</p>
+<p><img src="/2019/05/14/MySql-Error-1071/1557774982394.png" alt="1557774982394"></p>
+<p>Then it works.</p>
 
       
     </div>
@@ -333,9 +363,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/MySql/" rel="tag"># MySql</a>
           
-            <a href="/tags/pip/" rel="tag"># pip</a>
+            <a href="/tags/Solutions/" rel="tag"># Solutions</a>
           
         </div>
       
@@ -348,8 +378,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/24/SSR BBR/" rel="next" title="Build SSR on VPS">
-                <i class="fa fa-chevron-left"></i> Build SSR on VPS
+              <a href="/2019/05/14/KMP/" rel="next" title="KMP Algorithm">
+                <i class="fa fa-chevron-left"></i> KMP Algorithm
               </a>
             
           </div>
@@ -357,10 +387,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/17/Linux 学习之路/" rel="prev" title="Linux 学习之路">
-                Linux 学习之路 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -412,8 +438,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -464,6 +499,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Error-log"><span class="nav-text">The Error log</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Change-the-limit"><span class="nav-text">Change the limit</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Modify-the-configure-file"><span class="nav-text">Modify the configure file</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Set-parameters-in-terminal"><span class="nav-text">Set parameters in terminal</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Recreate-your-database-and-tables"><span class="nav-text">Recreate your database and tables</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
