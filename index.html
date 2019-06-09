@@ -367,6 +367,155 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/09/Ubuntu-18.04-Nvidia/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Runqian Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Powerrrrrr">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/09/Ubuntu-18.04-Nvidia/" itemprop="url">Ubuntu 18.04 Install Nvidia driver</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-09T13:30:20+08:00">
+                2019-06-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>When I was installing the Nvidia driver for the laptop with Ubuntu 18.04 system, I got caught with many problems.</p>
+</blockquote>
+<p>And after a lot of trials to solve all the matters and many rounds of install-reinstall, I successfully installed it.</p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><blockquote>
+<p>First I would to share how I install the driver.</p>
+</blockquote>
+<h3 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h3><h4 id="Download-run-file"><a href="#Download-run-file" class="headerlink" title="Download run file"></a>Download run file</h4><p>I chose the <code>.run</code> file to install the driver. You can get the correct run file on <a href="https://www.geforce.cn/drivers" target="_blank" rel="noopener">the official site of Nvidia drivers</a>.</p>
+<p>Download the correct run file that matches your device.</p>
+<blockquote>
+<p>Remember to change the mode of the <code>.run</code> file to a executable file.</p>
+</blockquote>
+<h4 id="Disable-Secure-Boot"><a href="#Disable-Secure-Boot" class="headerlink" title="Disable Secure Boot"></a>Disable Secure Boot</h4><p>Enter the BIOS before the computer start and disable Secure Boot mode.</p>
+<blockquote>
+<p>Different computers require different methods to enter the BIOS Interface. Maybe you can Google to check how to enter BIOS.</p>
+</blockquote>
+<h4 id="Disable-the-nouveau-driver"><a href="#Disable-the-nouveau-driver" class="headerlink" title="Disable the nouveau driver"></a>Disable the nouveau driver</h4><p>You need to disable the nouveau driver ensure that the Nvidia driver could be installed.</p>
+<p>Edit the file <code>/etc/modprobe.d/blacklist.conf</code></p>
+<p>At the end of the file add:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blacklist nouveau</span><br></pre></td></tr></table></figure></p>
+<h4 id="Stop-the-desktop"><a href="#Stop-the-desktop" class="headerlink" title="Stop the desktop"></a>Stop the desktop</h4><p>Use this command</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service lightdm stop</span><br></pre></td></tr></table></figure>
+<h3 id="Run-the-run-file"><a href="#Run-the-run-file" class="headerlink" title="Run the run file"></a>Run the run file</h3><p>Use administrator privilege to run the run file to install the driver.</p>
+<p>If you meet some matter about X server or others.</p>
+<p>You can try to run the file once again but add this parameters:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ./Nvidia.run -no-x-check -no-nouveau-check -no-opengl-files</span><br></pre></td></tr></table></figure></p>
+<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><p>You may meet something like these:</p>
+<ul>
+<li>run pre-script failed</li>
+<li>CC version check failed</li>
+</ul>
+<p>You can just ignore these.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/14/MySql-Error-1071/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -2566,238 +2715,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/14/HTTP Response Status Code/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Runqian Chen">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Powerrrrrr">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/14/HTTP Response Status Code/" itemprop="url">HTTP Response Status Code</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-14T01:28:04+08:00">
-                2019-05-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="1XX"><a href="#1XX" class="headerlink" title="1XX"></a>1XX</h2><blockquote>
-<p>received but processing</p>
-</blockquote>
-<ul>
-<li><p>100</p>
-<blockquote>
-<p>The server received the request, the client needs to continue sending request. The server will return a final response.</p>
-</blockquote>
-</li>
-<li><p>101</p>
-<blockquote>
-<p>The server has understood the request but it shows that the request should be processed by another protocol. </p>
-</blockquote>
-</li>
-<li><p>102</p>
-<blockquote>
-<p>It means the request had been received and continue to process it.</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="2XX"><a href="#2XX" class="headerlink" title="2XX"></a>2XX</h2><ul>
-<li><p>200</p>
-<blockquote>
-<p>Request successfully and the response is returned.</p>
-</blockquote>
-</li>
-<li><p>201</p>
-<blockquote>
-<p>Request has been realized but there is a new URI need to be create so please wait.</p>
-</blockquote>
-</li>
-<li><p>202</p>
-<blockquote>
-<p>Request success but the request is not being processed now. It means that the request can be refused or accepted.</p>
-</blockquote>
-</li>
-<li><p>204 </p>
-<blockquote>
-<p>Request success.</p>
-<p>The Response contains new meta info but no message body.</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="3XX"><a href="#3XX" class="headerlink" title="3XX"></a>3XX</h2><blockquote>
-<p>Redirect</p>
-</blockquote>
-<ul>
-<li><p>300</p>
-<blockquote>
-<p>Redirect</p>
-</blockquote>
-</li>
-<li><p>301</p>
-<blockquote>
-<p>Permanently redirect</p>
-</blockquote>
-</li>
-<li><p>302</p>
-<blockquote>
-<p>Temporarily redirect</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="4XX"><a href="#4XX" class="headerlink" title="4XX"></a>4XX</h2><blockquote>
-<p>Error of the client.</p>
-</blockquote>
-<ul>
-<li><p>400</p>
-<blockquote>
-<p>Request parameters error or wrong syntax.</p>
-</blockquote>
-</li>
-<li><p>401</p>
-<blockquote>
-<p>Authentication needed.</p>
-</blockquote>
-</li>
-<li><p>403</p>
-<blockquote>
-<p>Forbbiden</p>
-</blockquote>
-</li>
-<li><p>404</p>
-<blockquote>
-<p>Not found</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="5XX"><a href="#5XX" class="headerlink" title="5XX"></a>5XX</h2><blockquote>
-<p>Error of The server</p>
-</blockquote>
-<ul>
-<li><p>500</p>
-<blockquote>
-<p>Inner server error</p>
-</blockquote>
-</li>
-<li><p>501</p>
-<blockquote>
-<p>Server can’t identify request</p>
-</blockquote>
-</li>
-<li><p>502</p>
-<blockquote>
-<p>Invalid response</p>
-</blockquote>
-</li>
-<li><p>503</p>
-<blockquote>
-<p>Server can’t process the request now because of maintaining, overloading and so on.</p>
-</blockquote>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2848,7 +2765,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2861,7 +2778,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
