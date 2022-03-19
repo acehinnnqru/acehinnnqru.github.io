@@ -1,0 +1,50 @@
+baseURL = 'https://me.acehinnnqru.net'
+languageCode = 'en-us'
+title = '@acehinnnqru'
+theme = 'hello-friend-ng'
+
+paginate = 7
+
+[params]
+showReadingTime = true
+dateform = "Jan 2, 2006"
+dateformShort = "Jan 2"
+dateformNum = "2006-01-02"
+dateformNumTime = "2006-01-02 15:04"
+
+homeSubtitle = "A programer."
+
+disableReadOtherPosts = false
+
+enableSharingButtons = true
+
+description = "My new homepage or blog"
+keywords = "homepage, blog"
+images = [""]
+
+[taxonomies]
+category = "blog"
+tag = "tags"
+series = "series"
+
+[languages.en]
+keywords = ""
+readOtherPosts = "Read other posts"
+
+[languages.en.params.logo]
+logoText = "acehinnnqru"
+logoHomeLink = "/"
+
+[[menu.main]]
+identifier = "posts"
+name = "Posts"
+url = "/posts"
+
+[[menu.main]]
+identifier = "me"
+name = "Me"
+url = "/me"
+
+[[params.social]]
+  name = "github"
+  url = "https://github.com/acehinnnqru"
