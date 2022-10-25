@@ -8,8 +8,15 @@ const filepath = ref("/demo.md");
 </script>
 
 <template>
-  <div><Markdown :filepath="filepath"></Markdown></div>
+  <div>
+    <p>
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+    </p>
+    <router-view></router-view>
+  </div>
 </template>
 
 <style scoped>
+/* TODO: fill it */
 </style>
