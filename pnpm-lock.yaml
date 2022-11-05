@@ -11,6 +11,7 @@ specifiers:
   vue-agile: ^2.0.0
   vue-router: '4'
   vue-tsc: ^0.39.5
+  vuestic-ui: ^1.5.0
   windicss: ^3.5.6
 
 dependencies:
@@ -19,6 +20,7 @@ dependencies:
   vue: 3.2.40
   vue-agile: 2.0.0
   vue-router: 4.1.5_vue@3.2.40
+  vuestic-ui: 1.5.0_vue@3.2.40
 
 devDependencies:
   '@vitejs/plugin-vue': 3.1.2_vite@3.1.6+vue@3.2.40
@@ -95,6 +97,10 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
     dev: true
+
+  /@types/lodash/4.14.186:
+    resolution: {integrity: sha512-eHcVlLXP0c2FlMPm56ITode2AgLMSa6aJ05JTTbYbI+7EMkCEE5qk2E41d5g2lCVTqRe0GnnRFurmlCsDODrPw==}
+    dev: false
 
   /@types/marked/4.0.7:
     resolution: {integrity: sha512-eEAhnz21CwvKVW+YvRvcTuFKNU9CV1qH+opcgVK3pIMI6YZzDm6gc8o2vHjldFk6MGKt5pueSB7IOpvpx5Qekw==}
@@ -262,6 +268,14 @@ packages:
     dependencies:
       fill-range: 7.0.1
     dev: true
+
+  /cleave.js/1.6.0:
+    resolution: {integrity: sha512-ivqesy3j5hQVG3gywPfwKPbi/7ZSftY/UNp5uphnqjr25yI2CP8FS2ODQPzuLXXnNLi29e2+PgPkkiKUXLs/Nw==}
+    dev: false
+
+  /colortranslator/1.9.3:
+    resolution: {integrity: sha512-51O07JAa8J0uIZT08FOGirqRBK9DVG0luuTNjYk9FdawE4tFc3yp7jQhRkZQsUDRwCnKa4CwMRuJIiaSeXsGvg==}
+    dev: false
 
   /csstype/2.6.21:
     resolution: {integrity: sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==}
@@ -581,6 +595,10 @@ packages:
     resolution: {integrity: sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==}
     dev: false
 
+  /lodash/4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+    dev: false
+
   /lru-cache/6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
     engines: {node: '>=10'}
@@ -797,6 +815,18 @@ packages:
       '@vue/runtime-dom': 3.2.40
       '@vue/server-renderer': 3.2.40_vue@3.2.40
       '@vue/shared': 3.2.40
+
+  /vuestic-ui/1.5.0_vue@3.2.40:
+    resolution: {integrity: sha512-zXjeV6/Q1btIVjvBjpUTaC0HBNKZ8Se5RTf9xky7uIjhMATpJDvt9nC7G2FbXIYcKJ/UVIKghk7JuPh0lKASNQ==}
+    peerDependencies:
+      vue: ^3.0.4
+    dependencies:
+      '@types/lodash': 4.14.186
+      cleave.js: 1.6.0
+      colortranslator: 1.9.3
+      lodash: 4.17.21
+      vue: 3.2.40
+    dev: false
 
   /windicss/3.5.6:
     resolution: {integrity: sha512-P1mzPEjgFMZLX0ZqfFht4fhV/FX8DTG7ERG1fBLiWvd34pTLVReS5CVsewKn9PApSgXnVfPWwvq+qUsRwpnwFA==}
