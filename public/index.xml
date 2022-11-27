@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>@acehinnnqru</title>
+    <link>https://acehinnnqru.com/</link>
+    <description>Recent content on @acehinnnqru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Aug 2022 21:30:04 +0800</lastBuildDate><atom:link href="https://acehinnnqru.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>me</title>
+      <link>https://acehinnnqru.com/me/readme/</link>
+      <pubDate>Sun, 27 Nov 2022 12:03:48 +0800</pubDate>
+      
+      <guid>https://acehinnnqru.com/me/readme/</guid>
+      <description>This repository contains the detail of me.
+You can track who I am, what I used to do and what I am doing.
+If you get anything to ask, feel free to contact me with email or any ways you like.
+Everywhere Github Telegram Channel Discord Contact Mail to me Discord </description>
+    </item>
+    
+    <item>
+      <title>recently</title>
+      <link>https://acehinnnqru.com/me/recently/</link>
+      <pubDate>Sun, 27 Nov 2022 11:56:32 +0800</pubDate>
+      
+      <guid>https://acehinnnqru.com/me/recently/</guid>
+      <description> learning Rust, preparing to attend a Hackathon Web development, ready to write some projects life a little better ready to change timetable daily routine moving forward </description>
+    </item>
+    
+    <item>
+      <title>test posts</title>
+      <link>https://acehinnnqru.com/posts/test-posts/</link>
+      <pubDate>Mon, 06 Jul 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://acehinnnqru.com/posts/test-posts/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

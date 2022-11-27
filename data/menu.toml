@@ -1,14 +1,22 @@
 [[entries]]
-title = "me -"
+title = "me"
 
   [[entries.entries]]
   title = "github profile"
   url = "https://github.com/acehinnnqru"
 
+  [entries.post_list]
+  limit = 10
+  show_more = true
+  show_more_text = "See archive..."
+  show_more_url = "me"
+  section = "me"
+
 [[entries]]
-title = "all posts"
+title = "posts"
 
   [entries.post_list]
+  section = "posts"
   limit = 10
   show_more = true
   show_more_text = "See archive..."
