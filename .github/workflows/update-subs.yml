@@ -28,5 +28,9 @@ jobs:
     - name: update submodules
       run: |
         git submodule update --init --remote --recursive
+    - name: commit
+      run: |
+        git add .
+        git commit -a -m "feat: auto update submodules"
     - name: push commits
       uses: ad-m/github-push-action@v0.6.0
