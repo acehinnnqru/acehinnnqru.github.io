@@ -2,6 +2,11 @@
 name: Deploy Hugo site to Pages
 
 on:
+  workflow_run:
+    workflows: ["update submodules"]
+    types: [completed]
+    branches:
+      ["master"]
   # Runs on pushes targeting the default branch
   push:
     branches: ["master"]
