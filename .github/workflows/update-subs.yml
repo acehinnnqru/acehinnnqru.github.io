@@ -33,4 +33,4 @@ jobs:
         git add .
         git commit -a -m "feat: auto update submodules"
     - name: push commits
-      uses: ad-m/github-push-action@v0.6.0
+      uses: ad-m/github-push-action@master
