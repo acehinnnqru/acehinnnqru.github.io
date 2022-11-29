@@ -7,3 +7,9 @@ theme = 'nostyle'
     name = 'acehinnnqru'
     email = 'acehinnnqru@gmail.com'
 
+[module]
+[[module.mounts]]
+    source = 'content'
+    target = 'content'
+    excludeFiles = ['**/README.md']
+
