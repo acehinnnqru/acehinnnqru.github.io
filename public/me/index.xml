@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>me on @acehinnnqru</title>
-    <link>https://me.acehinnnqru.net/me/</link>
+    <link>https://me.acehinnnqru.com/me/</link>
     <description>Recent content in me on @acehinnnqru</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Nov 2022 13:26:58 +0800</lastBuildDate><atom:link href="https://me.acehinnnqru.net/me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Nov 2022 13:26:58 +0800</lastBuildDate><atom:link href="https://me.acehinnnqru.com/me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>my experiences</title>
-      <link>https://me.acehinnnqru.net/me/my-experiences/</link>
+      <link>https://me.acehinnnqru.com/me/my-experiences/</link>
       <pubDate>Sun, 27 Nov 2022 20:33:33 +0800</pubDate>
       
-      <guid>https://me.acehinnnqru.net/me/my-experiences/</guid>
+      <guid>https://me.acehinnnqru.com/me/my-experiences/</guid>
       <description>2022.06 ~ present: Microsoft Working as a software development engineer at the Microsoft Edge team.
 Responsibilities:
 Mainly responsible for improving the quality of products of Edge Consumer team Work cross groups to improve the development and testing work flow 2020.07 ~ 2022.06: Byte Dance Working as a software development engineer in test at the ByteDance E-commerce team.
@@ -22,10 +22,10 @@ Responsible for improving and realizing the development and testing workflow Res
     
     <item>
       <title>me</title>
-      <link>https://me.acehinnnqru.net/me/readme/</link>
+      <link>https://me.acehinnnqru.com/me/readme/</link>
       <pubDate>Sun, 27 Nov 2022 12:03:48 +0800</pubDate>
       
-      <guid>https://me.acehinnnqru.net/me/readme/</guid>
+      <guid>https://me.acehinnnqru.com/me/readme/</guid>
       <description>This repository contains the detail of me.
 You can track who I am, what I used to do and what I am doing.
 If you get anything to ask, feel free to contact me with email or any ways you like.
@@ -34,11 +34,11 @@ Everywhere Github Telegram Channel Discord Contact Mail to me Discord </descript
     
     <item>
       <title>recently</title>
-      <link>https://me.acehinnnqru.net/me/recently/</link>
+      <link>https://me.acehinnnqru.com/me/recently/</link>
       <pubDate>Sun, 27 Nov 2022 11:56:32 +0800</pubDate>
       
-      <guid>https://me.acehinnnqru.net/me/recently/</guid>
-      <description> learning Rust, preparing to attend a Hackathon Web development, ready to write some projects English, to work better with teammates life a little better ready to change timetable daily routine moving forward </description>
+      <guid>https://me.acehinnnqru.com/me/recently/</guid>
+      <description>my recently life and plans</description>
     </item>
     
   </channel>
