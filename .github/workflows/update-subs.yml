@@ -32,10 +32,5 @@ jobs:
       run: |
         git add .
         git commit -a -m "feat: auto update submodules"
-    - name: regenerate static
-      run: |
-        hugo
-        git add .
-        git commit -a -m "feat: auto re-generate static"
     - name: push commits
       uses: ad-m/github-push-action@master
