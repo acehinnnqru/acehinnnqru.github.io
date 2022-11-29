@@ -2,26 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://acehinnnqru.com/me/</loc>
+    <loc>https://me.acehinnnqru.net/categories/about/</loc>
+    <lastmod>2022-11-27T20:33:33+08:00</lastmod>
+  </url><url>
+    <loc>https://me.acehinnnqru.net/categories/</loc>
+    <lastmod>2022-11-27T20:33:33+08:00</lastmod>
+  </url><url>
+    <loc>https://me.acehinnnqru.net/me/my-experiences/</loc>
+    <lastmod>2022-11-27T20:33:33+08:00</lastmod>
+  </url><url>
+    <loc>https://me.acehinnnqru.net/posts/readme/</loc>
+    <lastmod>2022-11-27T20:25:24+08:00</lastmod>
+  </url><url>
+    <loc>https://me.acehinnnqru.net/posts/</loc>
+    <lastmod>2022-11-27T20:25:24+08:00</lastmod>
+  </url><url>
+    <loc>https://me.acehinnnqru.net/me/</loc>
     <lastmod>2022-11-27T13:26:58+08:00</lastmod>
   </url><url>
-    <loc>https://acehinnnqru.com/me/readme/</loc>
+    <loc>https://me.acehinnnqru.net/me/readme/</loc>
     <lastmod>2022-11-27T12:03:48+08:00</lastmod>
   </url><url>
-    <loc>https://acehinnnqru.com/me/recently/</loc>
+    <loc>https://me.acehinnnqru.net/me/recently/</loc>
     <lastmod>2022-11-27T11:56:32+08:00</lastmod>
   </url><url>
-    <loc>https://acehinnnqru.com/</loc>
+    <loc>https://me.acehinnnqru.net/</loc>
     <lastmod>2022-08-25T21:30:04+08:00</lastmod>
   </url><url>
-    <loc>https://acehinnnqru.com/posts/</loc>
-    <lastmod>2020-07-06T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://acehinnnqru.com/posts/test-posts/</loc>
-    <lastmod>2020-07-06T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://acehinnnqru.com/categories/</loc>
-  </url><url>
-    <loc>https://acehinnnqru.com/tags/</loc>
+    <loc>https://me.acehinnnqru.net/tags/</loc>
   </url>
 </urlset>
