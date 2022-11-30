@@ -10,3 +10,7 @@
 	path = content/posts
 	url = https://github.com/acehinnnqru/posts
 	branch = master
+[submodule "content/tour-everything"]
+	path = content/tour-everything
+	url = https://github.com/acehinnnqru/tour-everything
+	branch = master

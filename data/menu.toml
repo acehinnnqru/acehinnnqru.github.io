@@ -23,6 +23,11 @@ title = "posts"
   show_more_url = "posts"
 
 [[entries]]
+title = "tour everything"
+section = 'tour-everything'
+viewSections = true
+
+[[entries]]
 title = "rss"
 url = "index.xml"
 

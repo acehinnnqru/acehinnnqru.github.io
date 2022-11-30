@@ -7,6 +7,9 @@ theme = 'nostyle'
     name = 'acehinnnqru'
     email = 'acehinnnqru@gmail.com'
 
+[frontmatter]
+    date = [ ':default', ':fileModTime']
+
 [module]
 [[module.mounts]]
     source = 'content'
