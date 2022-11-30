@@ -10,16 +10,51 @@
     <webMaster>acehinnnqru@gmail.com (acehinnnqru)</webMaster>
     <lastBuildDate>Thu, 25 Aug 2022 21:30:04 +0800</lastBuildDate><atom:link href="https://me.acehinnnqru.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>command</title>
+      <link>https://me.acehinnnqru.com/tour-everything/cobra/01-command/</link>
+      <pubDate>Wed, 30 Nov 2022 02:53:37 +0800</pubDate>
+      <author>acehinnnqru@gmail.com (acehinnnqru)</author>
+      <guid>https://me.acehinnnqru.com/tour-everything/cobra/01-command/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>preface</title>
+      <link>https://me.acehinnnqru.com/tour-everything/cobra/00-preface/</link>
+      <pubDate>Wed, 30 Nov 2022 02:53:37 +0800</pubDate>
+      <author>acehinnnqru@gmail.com (acehinnnqru)</author>
+      <guid>https://me.acehinnnqru.com/tour-everything/cobra/00-preface/</guid>
+      <description>Diving into Cobra Preface This series records my personal tours into everything&amp;rsquo;s source code. It won&amp;rsquo;t be tutorials for anything. If you want to find some funny implements, graceful codes, this series of tours may be helpful.
+As a warning, all content in this series won&amp;rsquo;t judge any codes or design of these projects.
+So, let&amp;rsquo;s start to see what and how Cobra did.
+Intro As a gopher, you must have hear the command line library Cobra.</description>
+    </item>
+    
+    <item>
+      <title>where to find me</title>
+      <link>https://me.acehinnnqru.com/me/where-to-find-me/</link>
+      <pubDate>Tue, 29 Nov 2022 21:12:15 +0800</pubDate>
+      <author>acehinnnqru@gmail.com (acehinnnqru)</author>
+      <guid>https://me.acehinnnqru.com/me/where-to-find-me/</guid>
+      <description>where I am on the internet</description>
+    </item>
+    
+    <item>
       <title>my experiences</title>
       <link>https://me.acehinnnqru.com/me/my-experiences/</link>
-      <pubDate>Sun, 27 Nov 2022 20:33:33 +0800</pubDate>
+      <pubDate>Tue, 29 Nov 2022 21:11:56 +0800</pubDate>
       <author>acehinnnqru@gmail.com (acehinnnqru)</author>
       <guid>https://me.acehinnnqru.com/me/my-experiences/</guid>
-      <description>2022.06 ~ present: Microsoft Working as a software development engineer at the Microsoft Edge team.
-Responsibilities:
-Mainly responsible for improving the quality of products of Edge Consumer team Work cross groups to improve the development and testing work flow 2020.07 ~ 2022.06: Byte Dance Working as a software development engineer in test at the ByteDance E-commerce team.
-Responsibilities:
-Responsible for improving and realizing the development and testing workflow Responsible for designing, realizing the automation testing framework of team Responsible for managing the quality of the internal platform products </description>
+      <description>my past experiences</description>
+    </item>
+    
+    <item>
+      <title>init</title>
+      <link>https://me.acehinnnqru.com/posts/init/</link>
+      <pubDate>Sun, 27 Nov 2022 20:25:24 +0800</pubDate>
+      <author>acehinnnqru@gmail.com (acehinnnqru)</author>
+      <guid>https://me.acehinnnqru.com/posts/init/</guid>
+      <description>Initialize my site again and again!</description>
     </item>
     
     <item>

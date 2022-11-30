@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-us" class=""><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <title>
+     preface 
+  </title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/han-css@3/dist/han.min.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css" />
+    
+  <link rel="stylesheet" href="/css/main.css" />
+  
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+<a href="/">..</a>
+
+<article>
+    <p class="post-meta">
+        <time datetime="2022-11-30 02:53:37.853475508 &#43;0800 CST">
+            2022-11-30
+        </time>
+    </p>
+
+    <h1>preface</h1>
+
+    <h1 id="diving-into-cobra">Diving into Cobra</h1>
+<h2 id="preface">Preface</h2>
+<p>This series records my personal tours into everything&rsquo;s source code. It won&rsquo;t be tutorials for anything. If you want to find some funny implements, graceful codes, this series of tours may be helpful.</p>
+<p>As a warning, all content in this series won&rsquo;t judge any codes or design of these projects.</p>
+<p>So, let&rsquo;s start to see what and how <em>Cobra</em> did.</p>
+<h2 id="intro">Intro</h2>
+<p>As a gopher, you must have hear the command line library <em>Cobra</em>.</p>
+<p><em>Cobra</em>, which is the most popular cli lib of golang, got over 29k stars in GitHub.</p>
+<h2 id="structure">Structure</h2>
+<p>First, we determine the structure of <em>Cobra</em>.</p>
+<p><em>Cobra</em> contains only 14 go files and 11 go test files.</p>
+<p>Following is summary of the content of each file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>active_help.go            <span style="color:#75715e"># functionalities for active completion</span>
+</span></span><span style="display:flex;"><span>args.go                   <span style="color:#75715e"># arguments&#39; validation methods, including definition of PositionalArgs</span>
+</span></span><span style="display:flex;"><span>bash_completions.go       <span style="color:#75715e"># implements of completion for bash shell</span>
+</span></span><span style="display:flex;"><span>bash_completionsV2.go     <span style="color:#75715e"># v2 implements of completion for bash shell</span>
+</span></span><span style="display:flex;"><span>cobra.go                  <span style="color:#75715e"># global methods, vars</span>
+</span></span><span style="display:flex;"><span>command.go                <span style="color:#75715e"># definition of Command, Group, including methods</span>
+</span></span><span style="display:flex;"><span>command_notwin.go         <span style="color:#75715e"># definition of a nil var preExecHookFn, which only available in windows platform</span>
+</span></span><span style="display:flex;"><span>command_win.go            <span style="color:#75715e"># definition of preExecHook, as value of preExecHookFn; This file is only built when using &#39;windows&#39; build tags</span>
+</span></span><span style="display:flex;"><span>completions.go            <span style="color:#75715e"># common definitions for completion, including error, options...</span>
+</span></span><span style="display:flex;"><span>fish_completions.go       <span style="color:#75715e"># implements of completion for fish shell</span>
+</span></span><span style="display:flex;"><span>flag_groups.go            <span style="color:#75715e"># implements of flag group, including validation, utilities</span>
+</span></span><span style="display:flex;"><span>powershell_completions.go <span style="color:#75715e"># implements of completion for powershell</span>
+</span></span><span style="display:flex;"><span>shell_completions.go      <span style="color:#75715e"># common methods using for shell completion</span>
+</span></span><span style="display:flex;"><span>zsh_completions.go        <span style="color:#75715e"># implements of completion for zsh shell</span>
+</span></span></code></pre></div><h2 id="next-step01-commandmd">
+<a href="/tour-everything/cobra/01-command/">Next Step</a>
+</h2>
+
+</article>
+
+            </div>
+        </main>
+	<script src="https://cdn.jsdelivr.net/npm/han-css@3/dist/han.min.js"></script>
+    </body>
+</html>
