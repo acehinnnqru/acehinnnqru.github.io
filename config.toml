@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = '@acehinnnqru'
 theme = 'nostyle'
 
+[params]
 azureAppInsightsKey = '3815820d-7e91-4ed5-9b85-9424562b875e'
 
 [author]
