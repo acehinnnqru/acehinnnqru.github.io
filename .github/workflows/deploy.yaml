@@ -8,11 +8,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # To push a branch 
-      pages: write  # To push to a GitHub Pages site
+      contents: write # To push a branch
+      pages: write # To push to a GitHub Pages site
       id-token: write # To update the deployment status
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - name: Install latest mdbook
@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: 'book'
+          path: "book"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
