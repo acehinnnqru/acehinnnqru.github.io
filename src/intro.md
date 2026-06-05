@@ -1,14 +1,14 @@
 # Intro
 
-I am a developer, full of passion to open-source community.
+I'm a developer passionate about the open-source community.
 
-In a long time I spent most of my time working or hanging around. But recently, I sent several **small** code PRs to `neovim` and `golang/tools` that made me felt so great.
+For a long time I spent most of my time working or hanging out. But recently, I sent several **small** PRs to `neovim` and `golang/tools` — and that felt great.
 
-So I renewed my blog using [mdbook](https://rust-lang.github.io/mdBook/index.html) with [catpuccin](https://github.com/catppuccin/mdBook) theme, to write down what I have done or working on in my life.
+So I refreshed my blog using [mdbook](https://rust-lang.github.io/mdBook/index.html) with the [catppuccin](https://github.com/catppuccin/mdBook) theme, to document what I've worked on and what I'm building.
 
 ## To Find Me
 
-You can easily find me by searching `acehinnnqru` in social medias, including,
+You can find me by searching `acehinnnqru` on social media:
 
 - [X @acehinnnqru](https://x.com/acehinnnqru)
 - [GitHub @acehinnnqru](https://github.com/acehinnnqru)
