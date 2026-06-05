@@ -1,3 +1,3 @@
 # Golang
 
-To project [Golang](https://github.com/golang/go) or sub projects under it.
+To the [Go project](https://github.com/golang/go) and its sub-projects.
