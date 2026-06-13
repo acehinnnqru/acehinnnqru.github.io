@@ -1,3 +1,3 @@
 # Neovim
 
-To project [Neovim](https://github.com/neovim/neovim)
+To the [Neovim](https://github.com/neovim/neovim) project.
