@@ -1,3 +1,3 @@
 # Tools
 
-To project [Golang Tools](https://github.com/golang/tools)
+To the [Go tools](https://github.com/golang/tools) project.
